@@ -1,0 +1,16 @@
+# netlify.toml
+
+# La section [[redirects]] est utilisée pour toutes les règles de redirection et de réécriture
+[[redirects]]
+  # 'from' correspond au chemin entrant
+  from = "/*" 
+
+  # 'to' est la destination (votre fichier d'entrée principal)
+  to = "/index.html"
+
+  # 'status' indique le type de redirection/réécriture.
+  # 200 est un code de succès pour une réécriture (le client voit toujours l'URL demandée, mais le serveur renvoie le contenu de /index.html)
+  status = 200
+
+  # 'force' assure que la règle est appliquée, même si des fichiers statiques existent (moins critique pour le SPA fallback, mais utile)
+  # force = true
